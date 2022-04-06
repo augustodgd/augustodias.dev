@@ -1,0 +1,74 @@
+:root {
+  font-size: 10px;
+
+  --blue: #79addc;
+  --black: #331e36;
+  --gray: #5c3f6b;
+
+  --xs: 0.4rem;
+  --sm: 0.8rem;
+  --md: 1.6rem;
+  --lg: 3.2rem;
+  --xl: 6.4rem;
+
+  --mono: "Courier New", Courier, monospace;
+  --sans: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--blue);
+  color: var(--black);
+  font-family: var(--sans);
+  font-size: 1.6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--md);
+  max-width: 750px;
+  margin: auto;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+
+.profile-name {
+  margin-top: var(--md);
+}
+
+.profile-links {
+  display: flex;
+  list-style: none;
+  margin-top: var(--sm);
+}
+.profile-links a {
+  color: var(--gray);
+}
+
+.profile-link:not(:first-child)::before {
+  margin: 0 var(--xs);
+  content: "|";
+  display: inline;
+}
+
+.profile-description {
+  margin-top: var(--lg);
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: var(--mono);
+}
