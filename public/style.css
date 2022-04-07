@@ -55,15 +55,23 @@ body {
   display: flex;
   list-style: none;
   margin-top: var(--sm);
+  max-width: 200px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .profile-links a {
   color: var(--gray);
 }
 
-.profile-link:not(:first-child)::before {
+.profile-link {
+  display: flex;
+  line-height: 1.5;
+}
+
+.profile-link:not(:last-child)::after {
   margin: 0 var(--xs);
   content: "|";
-  display: inline;
+  display: block;
 }
 
 .profile-description {
